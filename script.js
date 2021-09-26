@@ -1,3 +1,32 @@
+// let InputMin = document.getElementById('input_min');
+// let InputMax = document.getElementById('input_max');
+
+
+
+// // let maxValue = value2;
+// // maxValue = value2 || '100';
+// // maxValue = (value2 > 999) ? 999 : value2;
+
+
+
+
+// document.getElementById('btnStartGame').addEventListener('click',  () => {
+
+//     minValue = minValue || '0';
+//     minValue = (minValue < -999) ? -999 : minValue;
+    
+//     maxValue = maxValue || '100';
+//     maxValue = (maxValue > 999) ? 999 : maxValue;
+//     alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
+    
+// });
+// let answerNumber = Math.floor((minValue + maxValue) / 2);
+// let orderNumber = 1;
+// let gameRun = true;
+// const orderNumberField = document.getElementById('orderNumberField');
+// const answerField = document.getElementById('answerField');
+
+//-----------работающее------------------------------------------
 let value1 = parseInt(prompt('Минимальное значение числа для игры', '0'));
 let minValue = value1 || '0';
 minValue = (value1 < -999) ? -999 : value1;
