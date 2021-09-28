@@ -92,8 +92,11 @@ function convertToText(stringNum) {
         19: 'девятнадцать ',
     }
 
-    const [nums, desc, hun] = stringNum.split('').reverse();
-
+    let [nums, desc, hun] = stringNum.split('').reverse();
+    if (desc == 1) {
+        desc == 0;
+        nums += 10;
+    }
     numberAsText = "";
     if (stringNum == 0) {
         numberAsText = "ноль";
@@ -105,7 +108,7 @@ function convertToText(stringNum) {
         numberAsText = hundreds[hun] + tens[desc] + integers[nums];
     } 
     numberAsText = (numberAsText.length > 20) ? stringNum : numberAsText;
-    numberAsText = (stringNum < 0) ? 'минус' + numberAsText : numberAsText;
+    numberAsText = (stringNum < 0) ? stringNum : numberAsText;
     return numberAsText;
 }
 
